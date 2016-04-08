@@ -8,7 +8,10 @@ use Mix.Config
 # meaningful, we use this information when generating URLs.
 config :chat, Chat.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "example.com"]
+  url: [host: "example.com"],
+  cache_static_manifest: "priv/static/manifest.json",
+  check_origin: false,
+  server: true
 
 # ## SSL Support
 #

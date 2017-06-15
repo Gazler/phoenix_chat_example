@@ -22,7 +22,7 @@ defmodule Chat.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 1.1.2"},
+    [{:phoenix, "~> 1.3.0-rc.2"},
      {:phoenix_html, "~> 2.4"},
      {:exrm, "~> 1.0.0"},
      {:cowboy, "~> 1.0"}]

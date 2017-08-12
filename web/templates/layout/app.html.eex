@@ -28,7 +28,7 @@
           <ul class="nav navbar-nav pull-right">
             <li>
               <%= if @conn.assigns[:websocket] == :websocket do %>
-                <%= link("Switch to long polling (not working yet)", to: page_path(@conn, :index, %{"longpoll" => 1})) %>
+                <%= link("Switch to long polling", to: page_path(@conn, :index, %{"longpoll" => 1})) %>
               <% else %>
                 <%= link("Switch to websockets", to: page_path(@conn, :index)) %>
               <% end %>

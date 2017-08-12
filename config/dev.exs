@@ -25,19 +25,6 @@ config :chat, Chat.Endpoint,
     port: 4001,
     certfile: certfile,
     keyfile: keyfile,
-    dispatch: [
-      {:_, [
-        {"/socket/websocket", Phoenix.Endpoint.Cowboy2WebSocket,
-         {Chat.Transports.WebSocket,
-          {Chat.Endpoint, Chat.UserSocket, :websocket}}},
-        {"/socket/longpoll", Plug.Adapters.Cowboy2.Handler,
-         {Phoenix.Transports.LongPoll,
-          {Chat.Endpoint, Chat.UserSocket, :longpoll}}},
-        {"/phoenix/live_reload/socket/websocket", Phoenix.Endpoint.Cowboy2WebSocket,
-         {Chat.Transports.WebSocket,
-          {Chat.Endpoint, Phoenix.LiveReloader.Socket, :websocket}}},
-        {:_, Plug.Adapters.Cowboy2.Handler, {Chat.Endpoint, []}}
-        ]}]
   ],
   handler: Phoenix.Endpoint.Cowboy2Handler,
   debug_errors: true,

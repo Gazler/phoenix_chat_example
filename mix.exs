@@ -22,14 +22,14 @@ defmodule Chat.Mixfile do
   #
   # Type `mix help deps` for examples and options
   defp deps do
-    [{:phoenix, "~> 1.2"},
+    [{:phoenix, "~> 1.2.0"},
      {:phoenix_html, "~> 2.5"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
-     {:plug_cowboy2, github: "voicelayer/plug_cowboy2", ref: "temp/skip-sendfile", override: true},
-     {:phoenix_cowboy2, github: "voicelayer/phoenix_cowboy2"},
-     {:ranch, github: "ninenines/ranch", ref: "1.3.0", override: true},
-     {:cowlib, github: "ninenines/cowlib", ref: "master", override: true},
-     {:cowboy, github: "ninenines/cowboy", ref: "2.0.0-pre.4", override: true},
+     {:plug_cowboy2, github: "voicelayer/plug_cowboy2", override: true},
+     {:phoenix_cowboy2, github: "voicelayer/phoenix_cowboy2", branch: "feat/http2-transport"},
+     {:ranch, github: "ninenines/ranch", ref: "1.4.0", override: true},
+     {:cowlib, github: "ninenines/cowlib", ref: "2.0.0-rc.1", override: true},
+     {:cowboy, github: "ninenines/cowboy", ref: "2.0.0-rc.1", override: true},
      {:postgrex, "~> 0.12.1"}]
   end
 end
